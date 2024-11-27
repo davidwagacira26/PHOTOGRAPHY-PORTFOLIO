@@ -281,6 +281,11 @@ footer {
         display: flex;
     }
 
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+    color: #f59e0b;
+}
+
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
