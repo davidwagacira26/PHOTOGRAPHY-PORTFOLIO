@@ -6,23 +6,19 @@
     <title>Services | Lens & Light</title>
     <link rel="stylesheet" href="/public/stylesheets/services.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
             <div class="logo">Lens & Light</div>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="/public/views/about.html">About</a></li>
+                <li><a href="/public/views/gallery.html">Gallery</a></li>
+                <li><a href="/public/views/services.html">Services</a></li>
+                <li><a href="/public/views/contact.html">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </nav>
     </header>
 
@@ -95,19 +91,28 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Lens & Light. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Facebook</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <nav class="mobile-nav">
+        <a href="/index.html" class="active">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/public/views/about.html">
+            <i data-lucide="user"></i>
+            <span>About</span>
+        </a>
+        <a href="/public/views/gallery.html">
+            <i data-lucide="image"></i>
+            <span>Gallery</span>
+        </a>
+        <a href="/public/views/services.html">
+            <i data-lucide="camera"></i>
+            <span>Services</span>
+        </a>
+        <a href="/public/views/contact.html">
+            <i data-lucide="mail"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+    <script src="/script.js"></script>
 </body>
 </html>
-
