@@ -59,6 +59,7 @@ header {
 .nav-links a.active {
     color: #f59e0b;
 }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -217,29 +218,10 @@ header {
 
 /* Footer */
 footer {
-    background-color: #18181b;
-    padding: 2rem 5%;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-link {
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: #f59e0b;
+    background-color: #27272a;
+    padding: 1rem 5%;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -250,6 +232,10 @@ footer {
 
     .nav-links {
         display: none;
+    }
+
+    .hero-background {
+        background-image: url('/assets/images/image2.jpeg');
     }
 
     .mobile-nav {
@@ -288,16 +274,16 @@ footer {
 
     .mobile-nav a:hover,
     .mobile-nav a.active {
-    color: #f59e0b;
-}
+        color: #f59e0b;
+    }
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    footer {
+        display: none;
+        margin-bottom: 60px; /* Add space for mobile navigation */
     }
 }
 
