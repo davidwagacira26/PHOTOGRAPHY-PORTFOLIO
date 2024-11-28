@@ -1,4 +1,4 @@
-* {
+\* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,6 +38,9 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    text-decoration: none;
+    color: #f4f4f5;
+    transition: color 0.3s ease;
 }
 
 .nav-links {
@@ -71,15 +74,38 @@ header {
     overflow: hidden;
 }
 
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .hero-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/assets/images/landscape1920x1080.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.hero-background.active {
     opacity: 0.3;
-    z-index: 1;
+    transform: scale(1);
+}
+
+.hero-background.next {
+    transform: scale(1.1);
+}
+
+.hero-background.prev {
+    transform: scale(0.9);
 }
 
 .hero-content {
@@ -216,7 +242,7 @@ header {
     display: none;
 }
 
-/* Footer */
+
 footer {
     background-color: #27272a;
     padding: 1rem 5%;
@@ -234,8 +260,8 @@ footer {
         display: none;
     }
 
-    .hero-background {
-        background-image: url('/assets/images/image2.jpeg');
+    .hero-carousel {
+        display: block;
     }
 
     .mobile-nav {
