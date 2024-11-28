@@ -36,8 +36,9 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    font-weight: 400;
     text-decoration: none;
     color: #f4f4f5;
     transition: color 0.3s ease;
