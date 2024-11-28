@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lens & Light | Photography Portfolio</title>
+    <title>Home | Lens & Light</title>
     <link rel="stylesheet" href="public/stylesheets/style.css">
     <link rel="shortcut icon" href="assets/images/logo2.jpg" type="image/png+xml">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,45 +12,47 @@
 <body>
     <header>
         <nav class="desktop-nav">
-            <div class="logo">Lens & Light</div>
+            <a href="/index.html" class="logo">Lens & Light</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="public/views/about.html">About</a></li>
                 <li><a href="public/views/gallery.html">Gallery</a></li>
                 <li><a href="public/views/services.html">Services</a></li>
                 <li><a href="public/views/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hero">
-            <div class="hero-background"></div>
+            <div class="hero-carousel">
+                <div class="hero-background active" style="background-image: url('assets/images/weddingphoto.jpg');"></div>
+                <div class="hero-background" style="background-image: url('assets/images/Michoma.jpg');"></div>
+                <div class="hero-background" style="background-image: url('assets/images/jenna2.jpg');"></div>
+                <div class="hero-background" style="background-image: url('assets/images/dave.jpg');"></div>
+                <div class="hero-background" style="background-image: url('assets/images/peter.jpg');"></div>
+            </div>
             <div class="hero-content">
                 <h1>Light  Focus Magic</h1>
                 <p>Through the Lens of Artistry</p>
                 <a href="public/views/gallery.html" class="cta-button">Explore Gallery</a>
             </div>
         </section>
-
         <section class="featured-works">
             <h2>Featured Works</h2>
-              
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/images/image1.jpeg" alt="Epic shot of Nation Centre">
+                    <img src="assets/images/charity.jpg" alt="Epic shot of Nation Centre">
                     <div class="overlay">
                         <p>Model Photography</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/image2.jpeg" alt="Model Photography">
+                    <img src="assets/images/dave3.jpg" alt="Model Photography">
                     <div class="overlay">
                         <p>Model Photography</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/dave3.jpg" alt="Scenic Views of Nairobi's Westlands">
+                    <img src="assets/images/jay.jpg" alt="Scenic Views of Nairobi's Westlands">
                     <div class="overlay">
                         <p>Model Photography</p>
                     </div>
@@ -58,11 +60,10 @@
             </div>
             <a href="public/views/gallery.html" class="view-all">View All Works</a>
         </section>
-
         <section class="about-preview">
             <h2>About</h2>
             <p>With a passion for capturing the beauty in everyday moments, I bring a unique perspective to every shot. My work is a blend of technical precision and artistic vision, creating images that tell compelling stories.</p>
-            <a href="public/views/about.html" class="learn-more">Learn More</a>
+            <a href="public/views/contact.html" class="learn-more">Connect with me</a>
         </section>
     </main>
      <nav class="mobile-nav">
@@ -90,11 +91,9 @@
             Contact
         </a>
     </nav>
-
     <footer>
         <p>&copy; 2024 Lens and Light. All rights reserved.</p>
     </footer>
-
     <script src="public/javascript/script.js"></script>
 </body>
 </html>
