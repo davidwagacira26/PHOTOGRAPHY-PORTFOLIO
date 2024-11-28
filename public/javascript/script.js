@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
 
     // Function to set active link
-    const setActiveLink = (url) => {
+    const setActiveLink = (pathname) => {
         navLinks.forEach(link => {
-            if (link.href === url) {
+            if (link.pathname === pathname) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     // Set active link on page load
-    setActiveLink(window.location.href);
+    setActiveLink(window.location.pathname);
 
     // Update active link on navigation
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const url = link.href;
-            setActiveLink(url);
-            window.location.href = url;
+            const pathname = link.pathname;
+            setActiveLink(pathname);
+            window.location.pathname = pathname;
         });
     });
 
