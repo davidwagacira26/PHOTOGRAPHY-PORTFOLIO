@@ -39,6 +39,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+    // Hero Carousel
+    const heroBackgrounds = document.querySelectorAll('.hero-background');
+    let currentIndex = 0;
+    let direction = 1; // 1 for forward, -1 for backward
+
+    function nextSlide() {
+        const prevIndex = (currentIndex - 1 + heroBackgrounds.length) % heroBackgrounds.length;
+        const nextIndex = (currentIndex + 1) % heroBackgrounds.length;
+
+        heroBackgrounds[prevIndex].classList.remove('active', 'next', 'prev');
+        heroBackgrounds[currentIndex].classList.remove('active', 'next', 'prev');
+        heroBackgrounds[nextIndex].classList.remove('active', 'next', 'prev');
+
+        if (direction === 1) {
+            heroBackgrounds[prevIndex].classList.add('prev');
+            heroBackgrounds[nextIndex].classList.add('next');
+        } else {
+            heroBackgrounds[prevIndex].classList.add('next');
+            heroBackgrounds[nextIndex].classList.add('prev');
+        }
+
+        heroBackgrounds[currentIndex].classList.add('active');
+
+        currentIndex = (currentIndex + direction + heroBackgrounds.length) % heroBackgrounds.length;
+        direction *= 1; // Change direction for next transition
+    }
+
+    // Set initial active slide
+    heroBackgrounds[currentIndex].classList.add('active');
+
+    // Change slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
     // Simple image lazy loading
     const lazyImages = document.querySelectorAll('img[data-src]');
     const lazyLoadImage = (entries, observer) => {
