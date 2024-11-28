@@ -9,7 +9,7 @@ body {
     background-color: #18181b;
     color: #f4f4f5;
     line-height: 1.6;
-    padding-bottom: 80px; /* Increased padding to accommodate the mobile navbar and home indicator */
+    padding-bottom: 60px; /* Adjusted to match the height of the mobile navbar */
 }
 
 a {
@@ -197,7 +197,7 @@ footer {
     .mobile-nav {
         display: flex;
         position: fixed;
-        bottom: 15px; /* Moved up to avoid the home indicator */
+        bottom: 0;
         left: 0;
         right: 0;
         background-color: rgba(24, 24, 27, 0.9);
@@ -205,18 +205,19 @@ footer {
         padding: 0.5rem;
         justify-content: space-around;
         z-index: 1000;
-        border-radius: 20px; /* Added rounded corners */
-        margin: 0 10px; /* Added side margins */
+        height: 60px; /* Set a fixed height */
     }
 
     .mobile-nav a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-decoration: none;
         font-size: 0.75rem;
         transition: color 0.3s ease;
         color: #f4f4f5;
+        height: 100%;
     }
 
     .mobile-nav a:hover,
@@ -240,6 +241,11 @@ footer {
 
     footer {
         display: none;
+    }
+
+    /* Ensure content doesn't get hidden behind the mobile nav */
+    main {
+        padding-bottom: 60px; /* Match the height of the mobile nav */
     }
 }
 
