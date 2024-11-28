@@ -267,7 +267,7 @@ footer {
     .mobile-nav {
         display: flex;
         position: fixed;
-        bottom: 0;
+        bottom: 15px;
         left: 0;
         right: 0;
         background-color: rgba(24, 24, 27, 0.9);
