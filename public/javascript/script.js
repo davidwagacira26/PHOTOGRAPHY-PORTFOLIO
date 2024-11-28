@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Function to set active link
     const setActiveLink = (pathname) => {
         navLinks.forEach(link => {
-            if (link.pathname === pathname) {
+            if (link.getAttribute('href') === pathname) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const pathname = link.pathname;
+            const pathname = link.getAttribute('href');
             setActiveLink(pathname);
-            window.location.pathname = pathname;
+            window.location.href = pathname;
         });
     });
 

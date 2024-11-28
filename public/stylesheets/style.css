@@ -245,7 +245,7 @@ footer {
         left: 0;
         right: 0;
         background-color: rgba(24, 24, 27, 0.9);
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid #2d2d2d;
         padding: 0.5rem;
         justify-content: space-around;
         z-index: 1000;
@@ -257,6 +257,7 @@ footer {
         text-decoration: none;
         font-size: 0.75rem;
         transition: color 0.3s ease;
+        color: #f4f4f5;
     }
     .mobile-nav a:hover,
     .mobile-nav a.active {
@@ -268,22 +269,12 @@ footer {
         margin-bottom: 0.25rem;
     }
 
-    .mobile-nav {
-        display: flex;
-    }
-
-    .mobile-nav a:hover,
-    .mobile-nav a.active {
-        color: #f59e0b;
-    }
-
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     footer {
         display: none;
-        margin-bottom: 60px; /* Add space for mobile navigation */
     }
 }
 
