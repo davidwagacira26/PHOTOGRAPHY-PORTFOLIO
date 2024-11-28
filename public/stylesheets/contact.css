@@ -9,7 +9,7 @@ body {
     background-color: #18181b;
     color: #f4f4f5;
     line-height: 1.6;
-    padding-bottom: 60px; /* Adjusted to match the height of the mobile navbar */
+    padding-bottom: 60px;
 }
 
 a {
@@ -205,19 +205,17 @@ footer {
         padding: 0.5rem;
         justify-content: space-around;
         z-index: 1000;
-        height: 60px; /* Set a fixed height */
+        padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
     }
 
     .mobile-nav a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-decoration: none;
         font-size: 0.75rem;
         transition: color 0.3s ease;
         color: #f4f4f5;
-        height: 100%;
     }
 
     .mobile-nav a:hover,
@@ -243,9 +241,8 @@ footer {
         display: none;
     }
 
-    /* Ensure content doesn't get hidden behind the mobile nav */
-    main {
-        padding-bottom: 60px; /* Match the height of the mobile nav */
+    body {
+        padding-bottom: calc(60px + env(safe-area-inset-bottom));
     }
 }
 
