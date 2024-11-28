@@ -9,7 +9,7 @@
     background-color: #18181b;
     color: #f4f4f5;
     line-height: 1.6;
-    padding-bottom: calc(70px + env(safe-area-inset-bottom));
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
   }
   
   a {
@@ -202,10 +202,11 @@
       right: 0;
       background-color: rgba(24, 24, 27, 0.9);
       border-top: 1px solid #2d2d2d;
-      padding: 0.75rem 0.5rem;
-      padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+      padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
       justify-content: space-around;
+      align-items: flex-start;
       z-index: 1000;
+      height: calc(60px + env(safe-area-inset-bottom));
     }
   
     .mobile-nav a {
