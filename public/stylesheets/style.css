@@ -1,4 +1,4 @@
-\* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
     background-color: #18181b;
     color: #f4f4f5;
     line-height: 1.6;
-    padding-bottom: 60px;
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
 }
 
 a {
@@ -242,7 +242,6 @@ header {
     display: none;
 }
 
-
 footer {
     background-color: #27272a;
     padding: 1rem 5%;
@@ -267,12 +266,13 @@ footer {
     .mobile-nav {
         display: flex;
         position: fixed;
-        bottom: 15px;
+        bottom: 0;
         left: 0;
         right: 0;
         background-color: rgba(24, 24, 27, 0.9);
         border-top: 1px solid #2d2d2d;
         padding: 0.5rem;
+        padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
         justify-content: space-around;
         z-index: 1000;
     }
